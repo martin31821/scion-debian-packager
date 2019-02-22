@@ -1,0 +1,14 @@
+# Setup armhf and arm64 to be taken from ubports.
+
+deb [arch=amd64,i386] http://de.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial main restricted universe multiverse
+
+deb [arch=amd64,i386] http://de.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial-updates main restricted universe multiverse
+
+deb [arch=amd64,i386] http://de.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial-backports main restricted universe multiverse
+
+deb [arch=amd64,i386] http://security.ubuntu.com/ubuntu xenial-security main restricted universe multiverse
+deb [arch=armhf,arm64] http://ports.ubuntu.com/ xenial-security main restricted universe multiverse
+
