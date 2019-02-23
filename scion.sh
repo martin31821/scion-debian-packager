@@ -5,19 +5,18 @@
 
 set -ex
 
-mkdir /buildroot 
+mkdir -p /buildroot 
 cd /buildroot 
-if [ ! -d "$(pwd)/zlog" ]
-then
-	git clone https://github.com/martin31821/zlog.git
-fi
-cd zlog 
-git checkout 1.2.12/debian 
-debuild -us -uc -b -aamd64 -tc 
+git clone https://github.com/martin31821/scion.git
+cd scion
+
+debuild -us -uc -b -aamd64 -tc
 debuild -us -uc -b -aarm64 -tc 
 debuild -us -uc -b -aarmhf -tc 
+
 cd /buildroot 
-mkdir debs
-cp *.deb debs
-echo "Installing libzlog."
-dpkg -i *.deb
+mkdir -p debs
+for x in *.deb
+do
+	cp "${x}" debs
+done

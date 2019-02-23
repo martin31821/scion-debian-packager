@@ -1,0 +1,37 @@
+# Install all packages *not* from the bionic distribution.
+Package: *
+Pin: release n=bionic
+Pin-Priority: -10
+
+
+Package: libpcap0.8:amd64
+Pin: release n=bionic
+Pin-Priority: 600
+
+Package: libpcap0.8:armhf
+Pin: release n=bionic
+Pin-Priority: 600
+
+Package: libpcap0.8:i386
+Pin: release n=bionic
+Pin-Priority: 600
+
+Package: libpcap0.8:arm64
+Pin: release n=bionic
+Pin-Priority: 600
+
+Package: libpcap0.8-dev:amd64
+Pin: release n=bionic
+Pin-Priority: 600
+
+Package: libpcap0.8-dev:arm64
+Pin: release n=bionic
+Pin-Priority: 600
+
+Package: libpcap0.8-dev:armhf
+Pin: release n=bionic
+Pin-Priority: 600
+
+Package: libpcap0.8-dev:i386
+Pin: release n=bionic
+Pin-Priority: 600
