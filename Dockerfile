@@ -1,6 +1,4 @@
 FROM ubuntu:16.04
-LABEL Maintainer Martin Koppehel <mkoppehel@embedded.enterprises>
-
 
 RUN dpkg --add-architecture i386 && dpkg --add-architecture armhf && dpkg --add-architecture arm64 && dpkg --add-architecture amd64
 ADD apt.sources.list /etc/apt/sources.list
